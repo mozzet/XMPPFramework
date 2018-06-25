@@ -988,9 +988,9 @@ extern const NSTimeInterval XMPPStreamTimeoutNone;
  * If you have need to modify an element for any reason,
  * you should copy the element first, and then modify and use the copy.
 **/
-- (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq;
-- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message;
-- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence;
+- (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq NS_SWIFT_NAME(xmppStream:didReceiveIQ:);
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message NS_SWIFT_NAME(xmppStream:didReceiveMessage:);
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence NS_SWIFT_NAME(xmppStream:didReceivePresence:);
 
 /**
  * This method is called if an XMPP error is received.
