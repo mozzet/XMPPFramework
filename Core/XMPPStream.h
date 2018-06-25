@@ -1033,9 +1033,9 @@ extern const NSTimeInterval XMPPStreamTimeoutNone;
  * These methods may be used to listen for certain events (such as an unavailable presence having been sent),
  * or for general logging purposes. (E.g. a central history logging mechanism).
 **/
-- (void)xmppStream:(XMPPStream *)sender didSendIQ:(XMPPIQ *)iq;
-- (void)xmppStream:(XMPPStream *)sender didSendMessage:(XMPPMessage *)message;
-- (void)xmppStream:(XMPPStream *)sender didSendPresence:(XMPPPresence *)presence;
+- (void)xmppStream:(XMPPStream *)sender didSendIQ:(XMPPIQ *)iq NS_SWIFT_NAME(xmppStream(stream:didSendIQ:));
+- (void)xmppStream:(XMPPStream *)sender didSendMessage:(XMPPMessage *)message NS_SWIFT_NAME(xmppStream(stream:didSendMessage:));
+- (void)xmppStream:(XMPPStream *)sender didSendPresence:(XMPPPresence *)presence NS_SWIFT_NAME(xmppStream(stream:didSendPresence:));
 
 /**
  * These methods are called after failing to send the respective XML elements over the stream.
